@@ -12,17 +12,19 @@
 }
 
 body {
+    display: flex;
     font-family: 'Monsterrat', sans-serif ;
     background-color: hsl(30, 38%, 92%);
     font-size: 14px;
-    display: flex;
     justify-content: center;
     min-height: 100vh;
+    margin: 0;
 }
 
 .card {
     display: flex;
     max-width: 600px;
+    margin: auto;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -31,11 +33,15 @@ body {
 .product-image img {
     width: 100%;
     height: 100%;
+    height: auto;
     object-fit: cover;
+    flex:1;
 }
 
 .product-info {
-    padding: 30px;
+    padding: 32px;
+    flex: 1;
+    padding: 24px;
 }
 
 .project-category {
@@ -43,7 +49,7 @@ font-size: 12px;
 letter-spacing: 5px;
 text-transform: uppercase;
 color: hsl(228, 12%, 48%);
-margin-bottom: 12px;
+margin-bottom: 20px;
 }
 
 .product-name {
@@ -51,19 +57,19 @@ margin-bottom: 12px;
     font-size: 32px;
     line-height: 1;
     color: hsl(212, 21%, 14%);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .product-description {
     color: hsl(228, 12%, 48%);
     line-height: 1.6;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
-  
+
 .pricing {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .current-price {
@@ -82,7 +88,7 @@ margin-bottom: 12px;
     background-color: hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);
     border: none;
-    padding: 15px;
+    padding: 15px 30px;
     width: 100%;
     border-radius: 8px;
     font-weight: 700;
@@ -90,6 +96,7 @@ margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .add-to-cart::before {
@@ -97,7 +104,7 @@ margin-bottom: 12px;
     background-image: url('images/icon-cart.svg');
     width: 15px;
     height: 16px;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 .add-to-cart:hover {
@@ -107,5 +114,11 @@ margin-bottom: 12px;
 @media (max-width: 600px) {
     .card {
         flex-direction: column;
+        max-width: 343px;
     }
+}
+
+.attribution {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
 }
